@@ -3,6 +3,7 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {SeptaComponent} from './septa.component';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
+import {DataDetailComponent} from '../data-detail/data-detail.component';
 
 
 describe('SeptaComponent', () => {
@@ -12,7 +13,7 @@ describe('SeptaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SeptaComponent],
+      declarations: [SeptaComponent, DataDetailComponent],
       imports: [
         BrowserModule,
         FormsModule
