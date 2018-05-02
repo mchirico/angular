@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Hero, Customer, IPerson} from '../hero';
+import {Hero, Customer, IPerson} from '../data';
+import {HEROES} from '../data/mock-data';
 
 
 @Component({
@@ -9,11 +10,7 @@ import {Hero, Customer, IPerson} from '../hero';
 })
 export class SeptaComponent implements OnInit {
 
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
-
+  heroes = HEROES;
 
   person: IPerson = {
     firstName: 'John',
@@ -21,9 +18,9 @@ export class SeptaComponent implements OnInit {
     age: 23
   };
 
-
   cust = new Customer(this.person);
 
+  selectedHero: Hero;
 
   constructor() {
   }
@@ -31,4 +28,7 @@ export class SeptaComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }

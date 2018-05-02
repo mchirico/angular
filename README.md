@@ -1,9 +1,15 @@
 # AngTest
 
+[![Build Status](https://travis-ci.com/mchirico/angular.svg?token=5SRVEbu3yi6HxnJgqQeT&branch=develop)](https://travis-ci.com/mchirico/angular)
+
+### Test project
+
+This is a test project, for experimenting and sharing ideas.  See [JIRA](https://jira.aipiggybot.io/projects/AN/issues/AN-1?filter=allissues) for all tasks.
+
+
 
 Current directory: /Users/mchirico/workspace/angTest
 
-[![Build Status](https://travis-ci.com/mchirico/angular.svg?token=5SRVEbu3yi6HxnJgqQeT&branch=develop)](https://travis-ci.com/mchirico/angular)
 
 ```bash
 # To run tests
