@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { SeptaComponent } from './septa/septa.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SeptaComponent
   ],
   imports: [
     BrowserModule
