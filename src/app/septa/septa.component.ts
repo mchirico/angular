@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Hero, Customer, IPerson} from '../hero';
+import {Data, Customer, IPerson} from '../data';
 
 
 @Component({
@@ -9,7 +9,7 @@ import {Hero, Customer, IPerson} from '../hero';
 })
 export class SeptaComponent implements OnInit {
 
-  hero: Hero = {
+  hero: Data = {
     id: 1,
     name: 'Windstorm'
   };
