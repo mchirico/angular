@@ -1,4 +1,4 @@
-export class Data {
+export class Hero {
   id: number;
   name: string;
 }
@@ -11,11 +11,12 @@ export interface IPerson {
 }
 
 export class Customer {
-
   p: IPerson;
-
   constructor(person: IPerson) {
     this.p = person;
+  }
+  test() {
+    return 'test';
   }
 
   greet() {

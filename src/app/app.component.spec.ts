@@ -1,6 +1,8 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed, async} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 import {SeptaComponent} from './septa/septa.component';
+import {FormsModule} from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
 
 
 describe('AppComponent', () => {
@@ -8,8 +10,15 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        SeptaComponent,
+        SeptaComponent
       ],
+
+      imports: [
+        BrowserModule,
+        FormsModule
+      ],
+
+
     }).compileComponents();
   }));
   it('should create the app', async(() => {
