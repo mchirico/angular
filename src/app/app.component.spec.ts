@@ -1,6 +1,10 @@
-import { TestBed, async } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed, async} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 import {SeptaComponent} from './septa/septa.component';
+import {FormsModule} from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
+
+import { DataDetailComponent } from './data-detail/data-detail.component';
 
 
 describe('AppComponent', () => {
@@ -9,7 +13,15 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         SeptaComponent,
+        DataDetailComponent
       ],
+
+      imports: [
+        BrowserModule,
+        FormsModule
+      ],
+
+
     }).compileComponents();
   }));
   it('should create the app', async(() => {
