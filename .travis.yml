@@ -20,7 +20,7 @@ install:
 script:
 - export CHROME_BIN=chromium-browser
 - xvfb-run -a npm run test -- --browsers=ChromeNoSandbox --no-progress --code-coverage
-- xvfb-run -a npm run e2e -- --no-progress --config=protractor-ci.conf.js
+- xvfb-run -a npm run e2e -- --config=protractor-ci.conf.js
 notifications:
   email:
     recipients:
