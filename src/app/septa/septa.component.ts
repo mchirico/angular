@@ -36,7 +36,8 @@ export class SeptaComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.dataService.getHeroes();
+    this.dataService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
   }
 
   getPeople(): void {
