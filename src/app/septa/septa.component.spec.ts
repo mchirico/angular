@@ -17,9 +17,8 @@ describe('SeptaComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SeptaComponent,
-        DataDetailComponent,
-      DataService,
-      MessageService, ],
+        DataDetailComponent],
+      providers:    [ MessageService, DataService ],
       imports: [
         BrowserModule,
         FormsModule
@@ -35,7 +34,7 @@ describe('SeptaComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
 
   });
