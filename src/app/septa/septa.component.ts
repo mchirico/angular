@@ -26,7 +26,7 @@ export class SeptaComponent implements OnInit {
 
   selectedHero: Hero;
 
-  constructor(private heroService: DataService,
+  constructor(private dataService: DataService,
               private messageService: MessageService) {
   }
 
@@ -36,11 +36,11 @@ export class SeptaComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroes = this.dataService.getHeroes();
   }
 
   getPeople(): void {
-    this.people = this.heroService.getPeople();
+    this.people = this.dataService.getPeople();
   }
 
   onSelect(hero: Hero): void {
