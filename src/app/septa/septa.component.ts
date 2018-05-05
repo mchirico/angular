@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Hero, Customer, IPerson} from '../data';
-import {HEROES} from '../data/mock-data';
+import {Hero, Customer, IPerson, People} from '../data';
+
+
+import {DataService} from '../data.service';
+import {MessageService} from '../message.service';
 
 
 @Component({
@@ -10,19 +13,8 @@ import {HEROES} from '../data/mock-data';
 })
 export class SeptaComponent implements OnInit {
 
-  people: any[] = [
-    {
-      'name': 'Douglas  Pace',
-      'country': 'UK'
-    },
-    {
-      'name': 'Mcleod  Mueller',
-      'country': 'USA'
-    },
-  ];
-
-
-  heroes = HEROES;
+  people: People[];
+  heroes: Hero[];
 
   person: IPerson = {
     firstName: 'John',
@@ -34,13 +26,25 @@ export class SeptaComponent implements OnInit {
 
   selectedHero: Hero;
 
-  constructor() {
+  constructor(private heroService: DataService,
+              private messageService: MessageService) {
   }
 
   ngOnInit() {
+    this.getHeroes();
+    this.getPeople();
+  }
+
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
+
+  getPeople(): void {
+    this.people = this.heroService.getPeople();
   }
 
   onSelect(hero: Hero): void {
+    this.messageService.add(`hero: ${hero.name}`);
     this.selectedHero = hero;
   }
 

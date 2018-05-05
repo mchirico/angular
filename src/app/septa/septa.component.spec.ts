@@ -5,6 +5,9 @@ import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {DataDetailComponent} from '../data-detail/data-detail.component';
 
+import {DataService} from '../data.service';
+import {MessageService} from '../message.service';
+
 
 describe('SeptaComponent', () => {
 
@@ -13,7 +16,9 @@ describe('SeptaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SeptaComponent, DataDetailComponent],
+      declarations: [SeptaComponent,
+        DataDetailComponent],
+      providers:    [ MessageService, DataService ],
       imports: [
         BrowserModule,
         FormsModule
@@ -31,5 +36,6 @@ describe('SeptaComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+
   });
 });
