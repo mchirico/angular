@@ -9,10 +9,6 @@ import { Observable, of } from 'rxjs';
 })
 export class DataService {
 
-  // getHeroes(): Hero[] {
-  //   this.messageService.add('Fetch...');
-  //   return HEROES;
-  // }
 
   getHeroes(): Observable<Hero[]> {
     this.messageService.add('Fetch...');
