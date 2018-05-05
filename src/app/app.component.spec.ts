@@ -8,6 +8,18 @@ import { DataDetailComponent } from './data-detail/data-detail.component';
 
 import {MessagesComponent} from './messages/messages.component';
 
+import {AppRoutingModule} from './app-routing.module';
+import {DataService} from './data.service';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {MessageService} from './message.service';
+
+
+import {
+  RouterTestingModule
+} from '@angular/router/testing';
+
+
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,13 +28,16 @@ describe('AppComponent', () => {
         SeptaComponent,
         DataDetailComponent,
         MessagesComponent,
+        DashboardComponent,
       ],
+      providers: [DataService, AppRoutingModule,
+         MessageService, ],
 
       imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        RouterTestingModule,
       ],
-
 
     }).compileComponents();
   }));
@@ -40,6 +55,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+    expect(compiled.querySelector('h1').textContent).toContain('app');
   }));
 });
