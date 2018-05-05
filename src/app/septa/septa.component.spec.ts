@@ -18,7 +18,7 @@ describe('SeptaComponent', () => {
     TestBed.configureTestingModule({
       declarations: [SeptaComponent,
         DataDetailComponent],
-      providers:    [ MessageService, DataService ],
+      providers: [MessageService, DataService],
       imports: [
         BrowserModule,
         FormsModule
@@ -38,4 +38,15 @@ describe('SeptaComponent', () => {
     expect(component).toBeTruthy();
 
   });
+
+  it('should create get from service', () => {
+    fixture = TestBed.createComponent(SeptaComponent);
+
+    const dataService = fixture.debugElement.injector.get(DataService);
+    expect(dataService.getPeople()[0].name).toEqual('Douglas  Pace');
+    expect(dataService.getPeople()).toEqual(component.people);
+
+  });
+
+
 });
