@@ -3,6 +3,11 @@ export class Hero {
   name: string;
 }
 
+export class People {
+  name: string;
+  country: string;
+}
+
 export interface IPerson {
   firstName: string;
   lastName: string;
