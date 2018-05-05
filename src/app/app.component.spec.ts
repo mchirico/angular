@@ -6,6 +6,7 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import { DataDetailComponent } from './data-detail/data-detail.component';
 
+import {MessagesComponent} from './messages/messages.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -13,7 +14,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         SeptaComponent,
-        DataDetailComponent
+        DataDetailComponent,
+        MessagesComponent,
       ],
 
       imports: [
