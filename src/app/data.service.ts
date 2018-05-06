@@ -11,8 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class DataService {
 
-
-  private heroesUrl = 'https://us-central1-mchirico.cloudfunctions.net/getUuid';
+  private heroesUrl = 'https://us-central1-mchirico.cloudfunctions.net/getHeroes';
 
   private log(message: string) {
     this.messageService.add('HeroService: ' + message);
