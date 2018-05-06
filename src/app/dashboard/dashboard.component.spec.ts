@@ -9,6 +9,7 @@ import {FormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from '../app-routing.module';
 import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClientModule} from '@angular/common/http';
 
 
 describe('DashboardComponent', () => {
@@ -23,6 +24,7 @@ describe('DashboardComponent', () => {
         BrowserModule,
         FormsModule,
         RouterTestingModule,
+        HttpClientModule,
       ]
     })
     .compileComponents();

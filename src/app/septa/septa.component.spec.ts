@@ -9,6 +9,9 @@ import {DataService} from '../data.service';
 import {MessageService} from '../message.service';
 import {RouterTestingModule} from '@angular/router/testing';
 
+import {HttpClient, HttpClientModule, HttpHeaders} from '@angular/common/http';
+
+
 
 describe('SeptaComponent', () => {
 
@@ -24,6 +27,7 @@ describe('SeptaComponent', () => {
         BrowserModule,
         FormsModule,
         RouterTestingModule,
+        HttpClientModule,
       ],
 
     })

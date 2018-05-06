@@ -6,6 +6,7 @@ import { DataDetailComponent } from './data-detail.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {RouterTestingModule} from '@angular/router/testing';
+import {HttpClientModule} from '@angular/common/http';
 
 describe('DataDetailComponent', () => {
   let component: DataDetailComponent;
@@ -17,7 +18,8 @@ describe('DataDetailComponent', () => {
       imports: [
         BrowserModule,
         FormsModule,
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule,
       ],
 
     })

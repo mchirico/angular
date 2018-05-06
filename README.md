@@ -26,3 +26,8 @@ ng e2e
 # To run server
 ng s -o
 ```
+
+
+### Google Cloud Function
+[Wiki for Google Cloud Function](https://github.com/mchirico/angular/wiki/Google-Cloud-Function)
+
