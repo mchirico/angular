@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapComponent } from './map.component';
+import {MapComponent, SafePipe} from './map.component';
 
 describe('MapComponent', () => {
   let component: MapComponent;
@@ -8,7 +8,7 @@ describe('MapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapComponent ]
+      declarations: [ MapComponent, SafePipe ]
     })
     .compileComponents();
   }));
@@ -19,7 +19,7 @@ describe('MapComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
