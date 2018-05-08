@@ -12,7 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 import {HttpClientModule} from '@angular/common/http';
-import { MapComponent } from './map/map.component';
+import {MapComponent, SafePipe} from './map/map.component';
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import { MapComponent } from './map/map.component';
     DataDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    MapComponent
+    MapComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

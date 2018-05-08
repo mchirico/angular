@@ -1,4 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import {Pipe, PipeTransform, NgModule} from '@angular/core'
+import {BrowserModule, DomSanitizer} from '@angular/platform-browser'
+
+@Pipe({ name: 'safe' })
+export class SafePipe implements PipeTransform {
+  constructor(private sanitizer: DomSanitizer) {}
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+}
 
 @Component({
   selector: 'app-map',
@@ -7,9 +17,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
+  }
+
+  trustSrcUrl = function(data){
+    return this.sanitizer.bypassSecurityTrustResourceUrl(data);
+  }
+
+  doSth() {
+    console.log('Doing sth...');
   }
 
 }
