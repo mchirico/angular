@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 import {HttpClientModule} from '@angular/common/http';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
     SeptaComponent,
     DataDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
