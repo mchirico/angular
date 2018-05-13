@@ -13,6 +13,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import {MapComponent, SafePipe} from './map/map.component';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
+import { SimpleTargetComponent } from './simple-target/simple-target.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import {MapComponent, SafePipe} from './map/map.component';
     DashboardComponent,
     MapComponent,
     SafePipe,
+    SimpleFormComponent,
+    SimpleTargetComponent,
   ],
   imports: [
     BrowserModule,
