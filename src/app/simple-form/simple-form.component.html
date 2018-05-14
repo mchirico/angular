@@ -14,8 +14,9 @@
   <div>{{item}}</div>
 </div>
 <app-simple-target
-[myInput]="text0">
+[myInput]="text0"
 
-</app-simple-target>
+(dataCreated)="onClickTarget($event)"
+></app-simple-target>
 
 
