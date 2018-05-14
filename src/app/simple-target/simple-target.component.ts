@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-simple-target',
@@ -7,9 +7,22 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SimpleTargetComponent implements OnInit {
   @Input() myInput = '';
-  constructor() { }
+  @Output() dataCreated = new EventEmitter<{ name: string, content: string }>();
+  text0 = '';
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
+
+  onTarget() {
+    this.dataCreated.emit({
+      name: 'name',
+      content: this.text0 + ' target',
+    });
+  }
+
 
 }
