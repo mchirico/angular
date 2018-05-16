@@ -21,10 +21,10 @@ import {AngularFireModule} from 'angularfire2';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 
 import {AngularFireAuthModule} from 'angularfire2/auth';
-import {AngularFireStorageModule} from 'angularfire2/storage';
 
 
 import {environment} from '../environments/environment';
+import { ItemComponent } from './item/item.component';
 
 
 @NgModule({
@@ -38,7 +38,8 @@ import {environment} from '../environments/environment';
     AuthComponent,
     SafePipe,
     SimpleFormComponent,
-    SimpleTargetComponent
+    SimpleTargetComponent,
+    ItemComponent
 
   ],
   imports: [
@@ -48,7 +49,6 @@ import {environment} from '../environments/environment';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFireStorageModule,
     AngularFirestoreModule
 
   ],
