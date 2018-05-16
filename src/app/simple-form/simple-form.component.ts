@@ -18,7 +18,7 @@ export class SimpleFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickTarget(data: { name: string, content: string }) {
+  callPushDataFromTarget(data: { name: string, content: string }) {
     this.dataElements.push({
       type: 'click',
       name: data.name,

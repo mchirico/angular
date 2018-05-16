@@ -6,11 +6,13 @@ import {DataDetailComponent} from './data-detail/data-detail.component';
 import {MapComponent} from './map/map.component';
 import {SimpleFormComponent} from './simple-form/simple-form.component';
 
+import {AuthComponent} from './auth/auth.component';
 
 const routes: Routes = [
   {path: 'heroes', component: SeptaComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'map', component: MapComponent},
+  {path: 'auth', component: AuthComponent},
   {path: 'simpleForm', component: SimpleFormComponent},
   {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
   {path: 'detail/:id', component: DataDetailComponent},
