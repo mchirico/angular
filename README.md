@@ -12,9 +12,15 @@ This is a test project, for experimenting and sharing ideas.  See [JIRA](https:/
 
 This can be imported directly into StackBlitz, using the following link:
 
-[*stackblitz.com/github/mchirico/angular*](stackblitz.com/github/mchirico/angular)
+[*stackblitz.com/github/mchirico/angular*](https://stackblitz.com/github/mchirico/angular)
 
-But, you must also update the npm packages.
+You must update the npm packages.  Auth will 
+not work because stackblitz in not in the
+list of authorized domains.
+
+## Live Example
+
+https://angular.aipiggybot.io
 
 ## Local Setup
 
