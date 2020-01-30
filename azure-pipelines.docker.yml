@@ -1,0 +1,19 @@
+# 
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  imageName: angular  # Replace with the name of the image you want to publish
+
+
+steps:
+- script: |
+    npm install -g @angular/cli
+    npm install
+    ng build --prod
+  displayName: 'npm install and build'
+
+- script: ng test --no-watch
+  displayName: 'ng test'
+

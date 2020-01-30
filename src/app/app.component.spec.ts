@@ -1,60 +1,34 @@
-import {TestBed, async} from '@angular/core/testing';
-import {AppComponent} from './app.component';
-import {SeptaComponent} from './septa/septa.component';
+import { TestBed, async } from '@angular/core/testing';
+import { AppComponent } from './app.component';
+import {ServerComponent} from './server/server.component';
 import {FormsModule} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
-
-import { DataDetailComponent } from './data-detail/data-detail.component';
-
-import {MessagesComponent} from './messages/messages.component';
-
-import {AppRoutingModule} from './app-routing.module';
-import {DataService} from './data.service';
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {MessageService} from './message.service';
-
-
-import {
-  RouterTestingModule
-} from '@angular/router/testing';
-
-
+import {ServersComponent} from './servers/servers.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        SeptaComponent,
-        DataDetailComponent,
-        MessagesComponent,
-        DashboardComponent,
+        ServerComponent,
+        ServersComponent
       ],
-      providers: [DataService, AppRoutingModule,
-         MessageService, ],
-
       imports: [
-        BrowserModule,
-        FormsModule,
-        RouterTestingModule,
-      ],
-
+      FormsModule
+      ]
     }).compileComponents();
   }));
-  it('should create the app', async(() => {
+
+  it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'app'`, async(() => {
+  });
+
+  it(`should have as title 'angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
-  }));
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app');
-  }));
+    expect(app.title).toEqual('angular');
+  });
+
+
 });
