@@ -9,8 +9,8 @@ variables:
 
 steps:
 - script: |
-    npm install -g @angular/cli
-    npm install
+    sudo npm install -g @angular/cli
+    sudo npm install
     ng build --prod
   displayName: 'npm install and build'
 
