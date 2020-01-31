@@ -18,6 +18,8 @@ steps:
 
 - script: |
     ng test --watch=false --browsers=ChromeHeadless --code-coverage
-    codecov
-  displayName: 'ng test'
+    codecov -t ${CODECOV_TOKEN}
+  env:
+    CODECOV_TOKEN: $(CODECOV_TOKEN)
+  displayName: 'ng test and codecov'
 
