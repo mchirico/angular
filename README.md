@@ -43,10 +43,7 @@ Current directory: /Users/mchirico/workspace/angTest
 
 ```bash
 # To run tests
-ng test
-
-ng e2e
-
+ng test --watch=false --browsers=ChromeHeadless --code-coverage
 
 
 ```
