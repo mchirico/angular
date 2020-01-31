@@ -7,7 +7,8 @@
 ### Playground project
 
 ```
-npm i bootstrap
+
+npm install bootstrap --save-dev
 
 
 ```
