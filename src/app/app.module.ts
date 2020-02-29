@@ -10,6 +10,8 @@ import { TwoComponent } from './nav/two/two.component';
 import { ThreeComponent } from './nav/three/three.component';
 import {AppRoutingModule} from './app-routing.module';
 import { MainComponent } from './nav/main/main.component';
+import { StartComponent } from './nav/two/start/start.component';
+import { DetailComponent } from './nav/two/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MainComponent } from './nav/main/main.component';
     OneComponent,
     TwoComponent,
     ThreeComponent,
-    MainComponent
+    MainComponent,
+    StartComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
