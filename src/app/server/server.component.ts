@@ -1,4 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {interval} from 'rxjs';
+
+function t(i) {
+  interval(1000).subscribe(() => {
+    console.log('test');
+  });
+  return i + 1;
+}
 
 @Component({
   selector: 'app-server',
@@ -6,10 +14,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
+  m = 0;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    interval(1000).subscribe((count) => {
+      this.m = count;
+      console.log(count);
+    });
   }
 
 }
