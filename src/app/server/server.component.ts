@@ -1,29 +1,27 @@
-import {Component, OnInit} from '@angular/core';
-import {interval} from 'rxjs';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {interval, Subscription} from 'rxjs';
 
-function t(i) {
-  interval(1000).subscribe(() => {
-    console.log('test');
-  });
-  return i + 1;
-}
 
 @Component({
   selector: 'app-server',
   templateUrl: './server.component.html',
   styleUrls: ['./server.component.css']
 })
-export class ServerComponent implements OnInit {
+export class ServerComponent implements OnInit, OnDestroy {
   m = 0;
+  private obsSubscription: Subscription;
 
   constructor() {
   }
 
   ngOnInit() {
-    interval(1000).subscribe((count) => {
+    this.obsSubscription = interval(1000).subscribe((count) => {
       this.m = count;
       console.log(count);
     });
   }
 
+  ngOnDestroy(){
+    this.obsSubscription.unsubscribe();
+  }
 }
