@@ -20,7 +20,8 @@ export class AuthComponent implements OnInit {
   }
 
   login() {
-    const url = 'https://cloud.aipiggybot.io/api/login';
+    //const url = 'https://cloud.aipiggybot.io/api/login';
+    const url = '/api/login';
     this.http.post<any>(url, {title: 'Angular POST Request Example'})
       .subscribe(data => {
         this.data = data;
@@ -28,7 +29,7 @@ export class AuthComponent implements OnInit {
   }
 
   stats() {
-    const url = 'https://cloud.aipiggybot.io/api/login';
+    const url = '/api/stats';
     this.http.post<any>(url, {title: 'Angular POST Request Example'})
       .subscribe(data => {
         this.data = data;
