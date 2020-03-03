@@ -36,7 +36,7 @@ import {AuthComponent} from './auth/auth.component';
     HttpClientModule,
     HttpClientXsrfModule.withOptions({
       cookieName: 'XSRF-TOKEN',
-      headerName: 'X-XSRF-TOKEN',
+      headerName: 'X-CSRF-Token',
     }),
   ],
   providers: [],
