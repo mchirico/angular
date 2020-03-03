@@ -24,15 +24,15 @@ export class AuthComponent implements OnInit {
     const url = '/api/login';
     this.http.post<any>(url, {title: 'Angular POST Request Example'})
       .subscribe(data => {
-        this.data = data;
+        this.data = data.login;
       });
   }
 
-  stats() {
-    const url = '/api/stats';
-    this.http.post<any>(url, {title: 'Angular POST Request Example'})
+  transfer() {
+    const url = '/api/transfer_money';
+    this.http.post<any>(url,{title: 'Angular POST Request Example'} )
       .subscribe(data => {
-        this.data = data;
+        this.data = data.money;
       });
   }
 

@@ -1,46 +1,54 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppComponent} from './app.component';
-import {ServerComponent} from './server/server.component';
-import {ServersComponent} from './servers/servers.component';
-import {NavbarComponent} from './navbar/navbar.component';
-import {OneComponent} from './nav/one/one.component';
-import {TwoComponent} from './nav/two/two.component';
-import {ThreeComponent} from './nav/three/three.component';
-import {AppRoutingModule} from './app-routing.module';
-import {MainComponent} from './nav/main/main.component';
-import {StartComponent} from './nav/two/start/start.component';
-import {DetailComponent} from './nav/two/detail/detail.component';
-import {HttpClientModule, HttpClientXsrfModule} from '@angular/common/http';
-import {AuthComponent} from './auth/auth.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { AuthComponent } from './navpages/auth/auth.component';
+import { Page0Component } from './navpages/page0/page0.component';
+import { Page1Component } from './navpages/page1/page1.component';
+import { MainComponent } from './navpages/main/main.component';
+import { SearchComponent } from './navpages/search/search.component';
+import { NavbarComponent } from './navbar/navbar/navbar.component';
+import { AreaChartComponent } from './navpages/page0/area-chart/area-chart.component';
+import { StartChartComponent } from './navpages/page0/area-chart/start-chart/start-chart.component';
+import { DetailChartComponent } from './navpages/page0/area-chart/detail-chart/detail-chart.component';
+import { HomeComponent } from './navpages/home/home.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalendarComponent } from './material-components/calendar/calendar.component';
+import {MaterialModule} from './material-module';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
-    ServersComponent,
-    NavbarComponent,
-    OneComponent,
-    TwoComponent,
-    ThreeComponent,
-    MainComponent,
-    StartComponent,
-    DetailComponent,
     AuthComponent,
-
+    Page0Component,
+    Page1Component,
+    MainComponent,
+    SearchComponent,
+    NavbarComponent,
+    AreaChartComponent,
+    StartChartComponent,
+    DetailChartComponent,
+    HomeComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
+    MaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    HttpClientXsrfModule.withOptions({
-      cookieName: 'XSRF-TOKEN',
-      headerName: 'X-XSRF-TOKEN',
-    }),
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }

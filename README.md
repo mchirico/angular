@@ -1,59 +1,68 @@
-# AngTest
-[![Build Status](https://dev.azure.com/mchirico/angular/_apis/build/status/mchirico.angular?branchName=develop)](https://dev.azure.com/mchirico/angular/_build/latest?definitionId=39&branchName=develop)
 
 
-[![codecov](https://codecov.io/gh/mchirico/angular/branch/develop/graph/badge.svg)](https://codecov.io/gh/mchirico/angular)
 
-### Playground project
+
+# Angular
 
 ```
-npm install --save @ng-bootstrap/ng-bootstrap
+# Heading
+ng g component navbar/navbar
 
+# Heading pages -  (add more if needed).
+ng g component navpages/home
+ng g component navpages/main
+ng g component navpages/auth
+ng g component navpages/page0
+ng g component navpages/page0/area-chart
+ng g component navpages/page0/area-chart/start-chart
+ng g component navpages/page0/area-chart/detail-chart
+ng g component navpages/page1
 
+ng g component navpages/search
 
-```
-
-
-
-This is a test project, for experimenting and sharing ideas.  See [JIRA](https://jira.aipiggybot.io/projects/AN/issues/AN-1?filter=allissues) for all tasks.
-
-
-## StackBlitz
-
-This can be imported directly into StackBlitz, using the following link:
-
-[*stackblitz.com/github/mchirico/angular*](https://stackblitz.com/github/mchirico/angular)
-
-You must update the npm packages.  Auth will 
-not work because stackblitz in not in the
-list of authorized domains.
-
-## Live Example
-
-https://angular.aipiggybot.io
-
-## Local Setup
-
-
-
-
-
-Current directory: /Users/mchirico/workspace/angTest
-
-
-```bash
-# To run tests
-ng test --watch=false --browsers=ChromeHeadless --code-coverage
+ng g service service/backend
+# D3 charts
+npm install d3 --save
+npm install @types/d3 --save-dev
 
 
 ```
 
-```bash
-# To run server
-ng s -o
+## References
+
+[1](https://medium.com/better-programming/reactive-charts-in-angular-8-using-d3-4550bb0b4255)
+
+
+### For Testing
+
+```
+https://angular.io/guide/testing#component-dom-testing
 ```
 
 
-### Google Cloud Function
-[Wiki for Google Cloud Function](https://github.com/mchirico/angular/wiki/Google-Cloud-Function)
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
